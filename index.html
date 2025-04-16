@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title> Трансформация и анимация</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/image.js"></script>
+    <script src="JavaScript/path.js"></script>
+
+  </head>
+  <body>   
+    <form id="setting">
+        <p>Координаты рисунка<br>
+          <label for="cx">x: </label>
+          <input type="number" id="cx" value="300" max="600" min="0"><br>
+          <label for="cy">y: </label>
+          <input type="number" id="cy" value="300" max="600" min="0">
+        </p>
+        <p>Масштаб<br>
+            <label for="mx">по x: </label>
+            <input type="number" id="mx" value="1" max="50" min="1"><br>
+            <label for="my">по y: </label>
+            <input type="number" id="my" value="1" max="50" min="1">
+          </p>
+          <p>Поворот<br>
+            <label for="rot">Угол: </label>
+            <input type="number" id="rot" value="0" max="360" min="0"><br>
+           
+          </p>
+        <p>
+          <input type="button" value="Нарисовать" id="start">
+          <input type="button" value="Очистить" id="clear"><br>
+          <input type="checkbox" id="check1">
+        <label for="check1" id="tcheck">Включить анимацию?</label>
+        </p>
+      </form>
+      <form id="settingPro">
+        <p id="coords">Координаты рисунка<br>
+          <label for="cx">x: </label>
+          <input type="number" id="cx" value="300" max="600" min="0">
+          <label for="cx_finish">до: </label>
+          <input type="number" id="cx_finish" value="550" max="600" min="0"><br>
+
+          <label for="cy">y: </label>
+          <input type="number" id="cy" value="300" max="600" min="0">
+          <label for="cy_finish">до: </label>
+          <input type="number" id="cy_finish" value="550" max="600" min="0">
+        </p>
+        <p id="extra">Пути перемещения <br>
+            <select id="route" name="route">
+                <option value="0">Буквой «Г»</option>
+                <option value="1">По кругу</option>
+               
+              </select><br>
+          </p><br>
+        <p id="hid1">Масштаб<br>
+            <label for="mx">по x: </label>
+            <input type="number" id="mx" value="1" max="50" min="1">
+            <label for="mx_finish">до: </label>
+            <input type="number" id="mx_finish" value="1.5" max="50" min="1"><br>
+
+            <label for="my">по y: </label>
+            <input type="number" id="my" value="1" max="10" min="1">
+            <label for="my_finish">до: </label>
+            <input type="number" id="my_finish" value="1.5" max="10" min="1">
+          </p><br>
+          <p id="hid2">Поворот<br>
+            <label for="rot">Угол: </label>
+            <input type="number" id="rot" value="0" max="360" min="0">
+            <label for="rot_finish">до </label>
+            <input type="number" id="rot_finish" value="180" max="360" min="0"><br>
+           
+          </p>
+        <p>
+          <input type="button" value="Очистить" id="clear1"><br>
+          <input type="checkbox" id="check2">
+        <label for="check2" id="tcheck">Включить анимацию?</label>
+        <select id="type" name="type">
+            <option value="linear">linear</option>
+            <option value="elastic">elastic</option>
+            <option value="bounce">bounce</option>
+          </select><br>
+          <input type="checkbox" id="check3">
+          <label for="check3" id="tcheck">Перемещение вдоль пути?</label><br>
+          <input type="button" value="Анимировать" id="anim">
+        </p>
+        
+      </form>
+    <svg></svg>
+
+  </body>
+</html>
